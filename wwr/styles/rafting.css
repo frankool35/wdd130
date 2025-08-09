@@ -181,7 +181,7 @@ footer {
     height: auto;
 }
 
-.gallery, .trip-cards {
+.gallery, .trip-cards, .offerings-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 16px;
@@ -190,7 +190,7 @@ footer {
     align-items: center;
 }
 
-.gallery img, .trip-cards img {
+.gallery img, .trip-cards img, .offerings-grid img {
     width: 100%;
     height: auto;
     max-width: 200px;
@@ -448,7 +448,7 @@ iframe  {
 
 .grid-items img {
   max-width: 100%;
-  border-radius: 8px;
+  border-radius: 8px;/
 }
 
 /* Table styling */
