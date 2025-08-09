@@ -84,7 +84,10 @@ nav a {
 
 .hero {
     position: relative;
-}
+    width:100%;
+    max-width: 900px;
+    overflow:hidden;
+    }
 
 .hero img {
     display: block;
@@ -100,10 +103,12 @@ nav a {
     width: 100%;
     padding: 16px;
     text-align: center;
-    opacity: 0.9;
+    opacity: 0.8;
     background-color: var(--accent1-color);
     color: #fff;
     font-size: 2rem;
+    left:0;
+    border-radius:8px;
 
 }
 
@@ -176,7 +181,7 @@ footer {
     height: auto;
 }
 
-.gallery {
+.gallery, .trip-cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 16px;
@@ -185,7 +190,7 @@ footer {
     align-items: center;
 }
 
-.gallery img {
+.gallery img, .trip-cards img {
     width: 100%;
     height: auto;
     max-width: 200px;
@@ -295,3 +300,245 @@ iframe  {
   font-weight: 500;
   color: #333;
 }
+
+/* =======Newletter SignUp Form====== */
+.newsletter-section {
+    background-color:#eef6f8;
+    padding:2rem;
+    text-align:center;
+    display: grid;
+    grid-template-columns:1fr;
+    max-width:900px;
+    gap:2rem;
+    
+}
+
+.newsletter h2 {
+    margin-bottom: 1rem;
+}
+
+.newsletter-form {
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+    gap:0.75rem;
+    max-width:400px;
+    margin:0 auto; 
+}
+
+
+.newsletter input[type="text"],
+.newsletter input[type="email"] {
+    padding: 0.5rem 1rem;
+    background-color:#0066cc;
+    color:white;
+    border: none;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+/* ========== Newsletter Signup Form ========== */
+.newsletter {
+  background-color: #eef6f8;
+  padding: 2rem;
+  text-align: center;
+}
+
+.newsletter-image {
+    background-color:#fff;
+    padding:20px;
+    border:8px;
+}
+
+.newsletter h2 {
+  margin-bottom: 1rem;
+}
+
+
+
+.newsletter input[type="text"],
+.newsletter input[type="email"] {
+  padding: 0.5rem;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.newsletter button {
+  padding: 0.5rem 1rem;
+  background-color: #0066cc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.newsletter button:hover {
+  background-color: #004999;
+}
+
+/* ========== Call to Action Section ========== */
+.cta {
+  background-color: #f8f8f8;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.cta h2 {
+  margin-bottom: 1rem;
+}
+
+.cta a {
+  text-decoration: none;
+  background-color: #28a745;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.cta a:hover {
+  background-color: #1c7c31;
+}
+
+/* ========== Grid Section ========== */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  background-color: #f0f0f0;
+}
+
+.feature-item {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.feature-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+.feature-item h3 {
+  margin-bottom: 0.5rem;
+}
+
+.offerings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  background-color: #f4f4f4;
+}
+
+.grid-items {
+  text-align: center;
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.grid-items img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+/* Table styling */
+.trip-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.trip-table th,
+.trip-table td {
+  border: 1px solid #333;
+  padding: 8px;
+  text-align: center;
+}
+
+.trip-table caption {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Responsive table for small screens */
+@media (max-width: 600px) {
+  .trip-table table,
+  .trip-table thead,
+  .trip-table tbody,
+  .trip-table th,
+  .trip-table td,
+  .trip-table tr {
+    display: block;
+    width: 100%;
+  }
+
+  .trip-table thead {
+    display: none; /* Hide headers */
+  }
+
+  .trip-table tr {
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    padding: 8px;
+  }
+
+  .trip-table td {
+    text-align: left;
+    padding-left: 50%;
+    position: relative;
+  }
+
+  .trip-table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 10px;
+    font-weight: bold;
+  }
+}
+
+
+caption {
+  caption-side: bottom;
+  padding: 10px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+thead,
+tfoot {
+  background-color: rgb(228 240 245);
+}
+
+th,
+td {
+  border: 0.5px solid rgb(160 160 160);
+  padding: 4px 5px ;
+}
+
+td:last-of-type {
+  text-align: center;
+}
+
+tbody > tr:nth-of-type(even) {
+  background-color: rgb(237 238 242);
+}
+
+tfoot th {
+  text-align: right;
+}
+
+tfoot td {
+  font-weight: bold;
+}
+
+
+
